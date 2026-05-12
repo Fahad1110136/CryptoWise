@@ -12,7 +12,7 @@
 
 **Advanced Cryptocurrency Prediction Platform with Real-time Prices, ML Models, and Trading Bots**
 
-[Live Demo](https://cryptowise.vercel.app) • [Report Bug](https://github.com/RanaFarhanIjaz/mycryptowise/issues) • [Request Feature](https://github.com/RanaFarhanIjaz/mycryptowise/issues)
+• [Report Bug](https://github.com/Fahad1110136/CryptoWise)
 
 </div>
 
