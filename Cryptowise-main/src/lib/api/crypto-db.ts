@@ -1,0 +1,210 @@
+﻿// Crypto Information Database
+// Detailed information about cryptocurrencies
+
+export interface CryptoInfo {
+  name: string
+  fullName: string
+  description: string
+  longDescription: string
+  founded: string
+  founder: string
+  website: string
+  whitepaper?: string
+  github?: string
+  twitter?: string
+  discord?: string
+  consensus: string
+  maxSupply: string
+  circulatingSupply: string
+  marketCap: string
+  allTimeHigh: string
+  allTimeLow: string
+  useCases: string[]
+  features: string[]
+  roadmap?: { year: string; event: string }[]
+  competitors?: string[]
+  strengths?: string[]
+  weaknesses?: string[]
+  whyInvest?: string[]
+  futureOutlook?: string[]
+}
+
+export const cryptoDatabase: Record<string, CryptoInfo> = {
+  SOL: {
+    name: 'Solana',
+    fullName: 'Solana (SOL)',
+    description: 'Solana is a high-performance blockchain supporting builders around the world creating crypto apps that scale today.',
+    longDescription: 'Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world. It achieves high transaction speeds through a unique combination of proof-of-history (PoH) and proof-of-stake (PoS) consensus mechanisms. Solana can process 50,000+ transactions per second with sub-second finality and extremely low fees.',
+    founded: '2020',
+    founder: 'Anatoly Yakovenko',
+    website: 'https://solana.com',
+    whitepaper: 'https://solana.com/solana-whitepaper.pdf',
+    github: 'https://github.com/solana-labs',
+    twitter: 'https://twitter.com/solana',
+    discord: 'https://discord.gg/solana',
+    consensus: 'Proof of History (PoH) + Proof of Stake (PoS)',
+    maxSupply: 'No max supply (inflationary)',
+    circulatingSupply: '~450 million SOL',
+    marketCap: '~$45 billion',
+    allTimeHigh: '$260',
+    allTimeLow: '$0.50',
+    useCases: [
+      'DeFi applications',
+      'NFT marketplaces',
+      'Web3 gaming',
+      'Decentralized exchanges',
+      'Payment processing'
+    ],
+    features: [
+      '50,000+ TPS (transactions per second)',
+      'Sub-second finality',
+      'Low transaction fees (<$0.01)',
+      'EVM compatibility via Neon',
+      'Energy efficient'
+    ],
+    roadmap: [
+      { year: '2020', event: 'Mainnet Beta Launch' },
+      { year: '2021', event: 'DeFi Summer on Solana' },
+      { year: '2022', event: 'Solana Mobile Stack Launch' },
+      { year: '2023', event: 'Solana Saga Phone Release' },
+      { year: '2024', event: 'Firedancer Validator Client' },
+      { year: '2025', event: 'Token Extensions & Upgrades' }
+    ],
+    competitors: ['Ethereum', 'BNB Chain', 'Avalanche', 'Polygon', 'Near Protocol'],
+    strengths: [
+      'Extremely fast transaction speed',
+      'Very low fees',
+      'Growing ecosystem',
+      'Strong developer community',
+      'Institutional adoption'
+    ],
+    weaknesses: [
+      'Network outages in past',
+      'Centralization concerns',
+      'Competition from Ethereum L2s',
+      'Younger ecosystem compared to Ethereum'
+    ],
+    whyInvest: [
+      'High scalability solution for mass adoption',
+      'Strong venture capital backing',
+      'Growing DeFi and NFT ecosystem',
+      'Real-world partnerships and adoption',
+      'Innovative technology stack'
+    ],
+    futureOutlook: [
+      'Firedancer validator client to improve decentralization',
+      'Solana Mobile Stack for Web3 adoption on mobile',
+      'Token extensions for enterprise use cases',
+      'Potential ETF approval',
+      'Expansion in Asian markets'
+    ]
+  },
+  BTC: {
+    name: 'Bitcoin',
+    fullName: 'Bitcoin (BTC)',
+    description: 'Bitcoin is the first decentralized cryptocurrency, operating on a peer-to-peer network without central authority.',
+    longDescription: 'Bitcoin is the world\'s first cryptocurrency, created in 2009 by an anonymous person or group known as Satoshi Nakamoto. It operates on a decentralized network using blockchain technology and proof-of-work consensus.',
+    founded: '2009',
+    founder: 'Satoshi Nakamoto',
+    website: 'https://bitcoin.org',
+    whitepaper: 'https://bitcoin.org/bitcoin.pdf',
+    github: 'https://github.com/bitcoin',
+    twitter: 'https://twitter.com/bitcoin',
+    consensus: 'Proof of Work (PoW)',
+    maxSupply: '21 million BTC',
+    circulatingSupply: '~19.5 million BTC',
+    marketCap: '~$1 trillion',
+    allTimeHigh: '$73,750',
+    allTimeLow: '$0.01',
+    useCases: ['Store of value', 'Digital gold', 'Cross-border payments', 'Hedge against inflation'],
+    features: ['Decentralized', 'Secure', 'Limited supply', 'Global', 'Censorship-resistant'],
+    strengths: ['First mover advantage', 'Strongest network effect', 'Most secure', 'Global recognition'],
+    weaknesses: ['Slow transactions', 'High energy consumption', 'Limited scalability']
+  },
+  ETH: {
+    name: 'Ethereum',
+    fullName: 'Ethereum (ETH)',
+    description: 'Ethereum is a decentralized global computer that enables smart contracts and dApps.',
+    longDescription: 'Ethereum is a decentralized blockchain with smart contract functionality. It\'s the foundation for DeFi, NFTs, and countless Web3 applications. Ethereum transitioned to Proof of Stake in 2022, reducing energy consumption by 99.9%.',
+    founded: '2015',
+    founder: 'Vitalik Buterin',
+    website: 'https://ethereum.org',
+    whitepaper: 'https://ethereum.org/whitepaper',
+    github: 'https://github.com/ethereum',
+    twitter: 'https://twitter.com/ethereum',
+    consensus: 'Proof of Stake (PoS)',
+    maxSupply: 'No max supply',
+    circulatingSupply: '~120 million ETH',
+    marketCap: '~$350 billion',
+    allTimeHigh: '$4,800',
+    allTimeLow: '$0.40',
+    useCases: ['Smart contracts', 'DeFi', 'NFTs', 'DAOs', 'Layer 2 solutions'],
+    features: ['Programmable', 'EVM compatible', 'Large ecosystem', 'Active development'],
+    strengths: ['First-mover in smart contracts', 'Largest developer ecosystem', 'Most dApps'],
+    weaknesses: ['High gas fees during congestion', 'Scalability challenges', 'Competition from L1s']
+  },
+
+// Add to cryptoDatabase object
+GOLD: {
+  name: 'Gold',
+  fullName: 'Gold (XAU)',
+  description: 'Gold is a precious metal and a traditional store of value.',
+  longDescription: 'Gold is one of the oldest and most trusted stores of value. It is often used as a hedge against inflation and economic uncertainty.',
+  founded: 'Ancient times',
+  founder: 'N/A',
+  website: 'https://www.gold.org',
+  consensus: 'Physical Asset',
+  maxSupply: 'Limited (Earth\'s crust)',
+  circulatingSupply: '~200,000 tons',
+  marketCap: '~$12 trillion',
+  allTimeHigh: '$2,750',
+  allTimeLow: '$35',
+  useCases: ['Store of value', 'Jewelry', 'Industrial applications', 'Central bank reserves'],
+  features: ['Tangible asset', 'Liquid market', 'Hedge against inflation'],
+  strengths: ['Store of value for millennia', 'High liquidity', 'Global acceptance'],
+  weaknesses: ['No yield', 'Storage costs', 'Volatile in short term']
+},
+SILVER: {
+  name: 'Silver',
+  fullName: 'Silver (XAG)',
+  description: 'Silver is a precious metal with industrial and investment applications.',
+  longDescription: 'Silver is both a precious metal and an industrial commodity. It has investment value and extensive industrial uses.',
+  founded: 'Ancient times',
+  founder: 'N/A',
+  website: 'https://www.silverinstitute.org',
+  consensus: 'Physical Asset',
+  maxSupply: 'Limited',
+  circulatingSupply: '~1.7 million tons',
+  marketCap: '~$1.2 trillion',
+  allTimeHigh: '$50',
+  allTimeLow: '$4',
+  useCases: ['Investment', 'Jewelry', 'Electronics', 'Solar panels', 'Medical applications'],
+  features: ['Dual demand (investment + industrial)', 'Affordable', 'High conductivity'],
+  strengths: ['Industrial demand growth', 'Affordable entry point', 'High volatility = trading opportunity'],
+  weaknesses: ['Industrial demand can drop', 'High volatility', 'Storage costs']
+}
+
+}
+
+export function getCryptoInfo(symbolName: string): CryptoInfo {
+  const defaultInfo: CryptoInfo = {
+    name: symbolName,
+    fullName: `${symbolName} (${symbolName})`,
+    description: `${symbolName} is a cryptocurrency trading on various exchanges.`,
+    longDescription: `${symbolName} is a digital asset in the cryptocurrency market. More information will be updated soon.`,
+    founded: 'N/A',
+    founder: 'Unknown',
+    website: '#',
+    consensus: 'Various',
+    maxSupply: 'Unknown',
+    circulatingSupply: 'Unknown',
+    marketCap: 'Unknown',
+    allTimeHigh: 'Unknown',
+    allTimeLow: 'Unknown',
+    useCases: ['Trading', 'Investment', 'Digital asset'],
+    features: ['Cryptocurrency', 'Digital asset', 'Blockchain-based']
+  }
+
+
+  return cryptoDatabase[symbolName] || defaultInfo
+}
